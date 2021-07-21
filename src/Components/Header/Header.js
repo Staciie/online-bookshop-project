@@ -1,61 +1,11 @@
 import React from "react";
-import {
-  Grid,
-  Typography,
-  IconButton,
-  makeStyles,
-  Badge,
-} from "@material-ui/core";
-import { withStyles } from "@material-ui/core/styles";
+import { Grid, Typography, IconButton } from "@material-ui/core";
 import ShoppingCartTwoToneIcon from "@material-ui/icons/ShoppingCartTwoTone";
 import PersonOutlineTwoToneIcon from "@material-ui/icons/PersonOutlineTwoTone";
 import { Link } from "react-router-dom";
-import Routes from "../constants/Routes";
-
-const useStyles = makeStyles({
-  container: {
-    justifyContent: "space-between",
-    alignItems: "center",
-    padding: "1% 4%",
-    position: "fixed",
-    top: "0",
-    left: "0",
-    backgroundColor: "#FFFFFF",
-    maxHeight: "6em",
-    boxShadow: "-1px -3px 10px #1e8494, 1px 3px 10px #4ABEE5;",
-  },
-  item: {
-    width: "50%",
-  },
-  item_right: {
-    width: "50%",
-    textAlign: "end",
-  },
-  logo_title: {
-    fontFamily: "'Josefin Sans', sans-serif",
-    color: "#33E3FF",
-    fontWeight: "400",
-    fontSize: "2em",
-  },
-  logo_title_span: {
-    fontWeight: "200",
-  },
-  link: {
-    marginRight: "6%",
-    textDecoration: "none",
-    color: "#313438",
-    "&:hover": {
-      textDecoration: "underline",
-    },
-  },
-});
-
-const StyledBadge = withStyles(() => ({
-  badge: {
-    right: "-3px",
-    backgroundColor: "#9B9B9B",
-  },
-}))(Badge);
+import { Routes } from "../../constants/Routes";
+import { StyledBadge } from "./StyledBadge";
+import { useStyles } from "./HeaderStyle";
 
 export function Header() {
   const classes = useStyles();
