@@ -8,26 +8,27 @@ export class HttpService {
   constructor(baseUrl, history) {
     this.url = baseUrl;
     this.history = history;
-    this.parseResponse = this.parseResponse.bind(this);
+    // this.parseResponse = this.parseResponse.bind(this);
   }
 
-  request = (method, path, headers, postContent) => {
+  request = (method, path, postContent, additionalSettings) => {
     return fetch(`${this.url}${path}`, {
       method,
-      headers,
+      headers: HEADERS,
       body: JSON.stringify(postContent),
+      ...additionalSettings,
     }).then(this.parseResponse);
   };
 
-  get(path) {
-    return this.request("GET", path);
-  }
+  get = (path, additionalSettings) => {
+    return this.request("GET", path, additionalSettings);
+  };
 
-  post(path, postContent) {
-    return this.request("POST", path, HEADERS, postContent);
-  }
+  post = (path, postContent, additionalSettings) => {
+    return this.request("POST", path, postContent, additionalSettings);
+  };
 
-  parseResponse(response) {
+  parseResponse = (response) => {
     if (response.ok) {
       return response.json();
     }
@@ -45,5 +46,5 @@ export class HttpService {
       console.log("Something went wrong:(");
       throw error;
     }
-  }
+  };
 }
