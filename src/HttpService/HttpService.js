@@ -16,11 +16,11 @@ export class HttpService {
       method,
       headers,
       body: JSON.stringify(postContent),
-    });
+    }).then(this.parseResponse);
   };
 
   get(path) {
-    return this.request("GET", path).then(this.parseResponse);
+    return this.request("GET", path);
   }
 
   post(path, postContent) {
