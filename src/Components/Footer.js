@@ -1,6 +1,6 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import { Grid, Link, Typography, makeStyles } from "@material-ui/core";
-// import { Logo } from "./Logo";
 
 const useStyles = makeStyles({
   container: {
@@ -42,23 +42,21 @@ export function Footer() {
         </Typography>
       </Grid>
       <Grid item className={classes.item_right}>
-        <Link to="/#" className={classes.link}>
+        <Link to="#" className={classes.link}>
           Privacy
         </Link>
-        <Link to="/#" className={classes.link}>
+        <Link to="#" className={classes.link}>
           Terms
         </Link>
-        <Link to="/contacts" className={classes.link}>
+        <Link to="#" className={classes.link}>
           Support
         </Link>
-        <Link to="/#" className={classes.link}>
+        <Link to="#" className={classes.link}>
           Sign Up
         </Link>
-        <Link to="/#" className={classes.link}>
+        <Link to="#" className={classes.link}>
           Sign In
         </Link>
-        <Link to="/cart" />
-        <Link to="/login" />
       </Grid>
     </Grid>
   );

@@ -10,6 +10,7 @@ import { withStyles } from "@material-ui/core/styles";
 import ShoppingCartTwoToneIcon from "@material-ui/icons/ShoppingCartTwoTone";
 import PersonOutlineTwoToneIcon from "@material-ui/icons/PersonOutlineTwoTone";
 import { Link } from "react-router-dom";
+import Routes from "../constants/Routes";
 
 const useStyles = makeStyles({
   container: {
@@ -61,7 +62,7 @@ export function Header() {
   return (
     <Grid container className={classes.container}>
       <Grid item className={classes.item}>
-        <Link to="/books" style={{ textDecoration: "none" }}>
+        <Link to={Routes.homePath} style={{ textDecoration: "none" }}>
           <Typography display="inline" className={classes.logo_title}>
             Book<span className={classes.logo_title_span}>Pitch</span>
           </Typography>
@@ -69,11 +70,11 @@ export function Header() {
       </Grid>
 
       <Grid item className={classes.item_right}>
-        <Link to="/contacts" className={classes.link}>
+        <Link to={Routes.contactsPath} className={classes.link}>
           Contacts
         </Link>
 
-        <Link to="/cart">
+        <Link to={Routes.cartPath}>
           <IconButton aria-label="cart">
             <StyledBadge badgeContent={1} color="primary">
               <ShoppingCartTwoToneIcon
@@ -84,7 +85,7 @@ export function Header() {
           </IconButton>
         </Link>
 
-        <Link to="/login">
+        <Link to={Routes.loginPath}>
           <IconButton aria-label="login">
             <PersonOutlineTwoToneIcon
               fontSize="medium"
