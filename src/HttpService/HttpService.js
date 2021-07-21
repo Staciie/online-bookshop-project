@@ -11,7 +11,7 @@ export class HttpService {
     // this.parseResponse = this.parseResponse.bind(this);
   }
 
-  request = (method, path, postContent, additionalSettings) => {
+  request = (method, path, postContent, additionalSettings = {}) => {
     return fetch(`${this.url}${path}`, {
       method,
       headers: HEADERS,
