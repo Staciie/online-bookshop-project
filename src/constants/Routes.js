@@ -3,4 +3,5 @@ export const Routes = {
   contactsPath: "/contacts",
   loginPath: "/login",
   cartPath: "/cart",
+  itemPath: "/books/:id",
 };

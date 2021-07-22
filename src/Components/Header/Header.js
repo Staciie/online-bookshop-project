@@ -1,9 +1,8 @@
-import React from "react";
 import { Grid, Typography, IconButton } from "@material-ui/core";
 import ShoppingCartTwoToneIcon from "@material-ui/icons/ShoppingCartTwoTone";
 import PersonOutlineTwoToneIcon from "@material-ui/icons/PersonOutlineTwoTone";
 import { Link } from "react-router-dom";
-import { Routes } from "../../constants/Routes";
+import { Routes } from "../../Constants/Routes";
 import { StyledBadge } from "./StyledBadge";
 import { useStyles } from "./HeaderStyle";
 
