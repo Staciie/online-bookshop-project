@@ -109,6 +109,28 @@
       "description": "The Old Man and the Sea is one of Hemingway's most enduring works. Told in language of great simplicity and power, it is the story of an old Cuban fisherman, down on his luck, and his supreme ordeal — a relentless, agonizing battle with a giant marlin far out in the Gulf Stream. Here Hemingway recasts, in strikingly contemporary style, the classic theme of courage in the face of defeat, of personal triumph won from loss. Written in 1952, this hugely successful novella confirmed his power and presence in the literary world and played a large part in his winning the 1954 Nobel Prize for Literature.",
       "authorHomeland": "USA",
       "yearOfPublishing": "1952"
+    },
+    {
+      "id": 11,
+      "title": "The ocean at the end of the lane",
+      "author": "N. Gaiman",
+      "genre": "Fantasy",
+      "imgUrl": "https://carrierollwagen.com/wp-content/uploads/2013/04/oceanattheendofthelane.jpg",
+      "favorite": false,
+      "description": "Sussex, England. A middle-aged man returns to his childhood home to attend a funeral. Although the house he lived in is long gone, he is drawn to the farm at the end of the road, where, when he was seven, he encountered a most remarkable girl, Lettie Hempstock, and her mother and grandmother. He hasn't thought of Lettie in decades, and yet as he sits by the pond (a pond that she'd claimed was an ocean) behind the ramshackle old farmhouse, the unremembered past comes flooding back. And it is a past too strange, too frightening, too dangerous to have happened to anyone, let alone a small boy. Forty years earlier, a man committed suicide in a stolen car at this farm at the end of the road. Like a fuse on a firework, his death lit a touchpaper and resonated in unimaginable ways. The darkness was unleashed, something scary and thoroughly incomprehensible to a little boy. And Lettie—magical, comforting, wise beyond her years—promised to protect him, no matter what. A groundbreaking work from a master, The Ocean at the End of the Lane is told with a rare understanding of all that makes us human, and shows the power of stories to reveal and shelter us from the darkness inside and out. It is a stirring, terrifying, and elegiac fable as delicate as a butterfly's wing and as menacing as a knife in the dark.",
+      "authorHomeland": "England",
+      "yearOfPublishing": "2013"
+    },
+    {
+      "id": 12,
+      "title": "Lolita",
+      "author": "Vl. Nabokov",
+      "genre": "Novel",
+      "imgUrl": "https://img.huffingtonpost.com/asset/55d33cd814000077002e3283.jpeg?ops=scalefit_630_noupscale",
+      "favorite": false,
+      "description": "Poet and pervert, Humbert Humbert becomes obsessed by twelve-year-old Lolita and seeks to possess her, first carnally and then artistically, out of love, 'to fix once for all the perilous magic of nymphets'. Is he in love or insane? A silver-tongued poet or a pervert? A tortured soul or a monster? Or is he all of these? Humbert Humbert's seduction is one of many dimensions in Nabokov's dizzying masterpiece, which is suffused with a savage humour and rich, elaborate verbal textures. Filmed by Stanley Kubrick in 1962 starring James Mason and Peter Sellers, and again in 1997 by Adrian Lyne starring Jeremy Irons and Melanie Griffith, Lolita has lost none of its power to shock and awe.",
+      "authorHomeland": "Russian Empire",
+      "yearOfPublishing": "1955"
     }
   ]
 }

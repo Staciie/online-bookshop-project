@@ -1,7 +1,8 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import { Grid, Link, Typography } from "@material-ui/core";
-import { useStyles } from "./FooterStyle";
+
+import { useStyles } from "./footer.style";
 
 export function Footer() {
   const classes = useStyles();

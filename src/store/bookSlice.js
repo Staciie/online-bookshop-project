@@ -1,27 +1,25 @@
 /* eslint-disable no-param-reassign */
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { HttpService } from "../HttpService/HttpService";
-import { history } from "./history";
 
-const bookHttpService = new HttpService(" http://localhost:3004", history);
-
-const initialState = {
-  list: [],
-  isLoading: false,
-};
+import { bookHttpService } from "./bookHttpService";
 
 export const bookAsync = createAsyncThunk("book/fetch", async () => {
   const results = await bookHttpService.get("/books");
   return results;
 });
 
+const initialState = {
+  list: [],
+  isLoading: false,
+};
+
 const bookSlice = createSlice({
-  name: "books",
+  name: "book",
   initialState,
   reducers: {},
   extraReducers: {
     [bookAsync.fulfilled]: (state, { payload }) => {
-      state.list = [...state.list, ...payload];
+      state.list = [...payload];
     },
   },
 });

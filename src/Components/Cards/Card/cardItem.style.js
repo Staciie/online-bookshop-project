@@ -18,7 +18,7 @@ export const useStyles = makeStyles({
   card_media: {
     boxShadow: "4px 0px 29px 3px rgba(66,66,66,0.84)",
     zIndex: "0",
-    height: "17em",
+    height: "19em",
     objectPosition: "left",
     objectFit: "cover",
   },

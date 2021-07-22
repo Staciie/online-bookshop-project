@@ -1,8 +1,10 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import { React } from "react";
 import { Box } from "@material-ui/core";
 import { useSelector } from "react-redux";
-import { CardItem } from "../Card/Card";
-import { useStyles } from "./BookListStyle";
+
+import { CardItem } from "../Card/CardItem";
+import { useStyles } from "./bookList.style";
 
 export function BookList() {
   const classes = useStyles();

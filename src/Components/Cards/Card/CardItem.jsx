@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { React } from "react";
 import {
   Card,
@@ -9,21 +8,21 @@ import {
   Typography,
   Grid,
 } from "@material-ui/core";
-
 import GradeTwoToneIcon from "@material-ui/icons/GradeTwoTone";
 import ShareTwoToneIcon from "@material-ui/icons/ShareTwoTone";
 import ShoppingCartTwoToneIcon from "@material-ui/icons/ShoppingCartTwoTone";
+import { useHistory, useRouteMatch } from "react-router";
+import PropTypes from "prop-types";
 
-import { useRouteMatch } from "react-router";
-import { useStyles } from "./CardStyle";
-import { history } from "../../../store/history";
+import { useStyles } from "./cardItem.style";
 
 export function CardItem({ id, title, imgUrl, author, description }) {
   const classes = useStyles();
-  const { path } = useRouteMatch();
 
-  const handleCardClick = (event) => {
-    event.preventDefault();
+  const { path } = useRouteMatch();
+  const history = useHistory();
+
+  const handleCardClick = () => {
     history.push(`${path}/${id}`);
   };
 
@@ -69,3 +68,11 @@ export function CardItem({ id, title, imgUrl, author, description }) {
     </Grid>
   );
 }
+
+CardItem.propTypes = {
+  id: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
+  imgUrl: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+};
