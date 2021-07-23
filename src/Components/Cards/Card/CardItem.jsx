@@ -20,10 +20,10 @@ export function CardItem({ id, title, imgUrl, author, description }) {
   const classes = useStyles();
 
   const { path } = useRouteMatch();
-  const history = useHistory();
+  const { push } = useHistory();
 
   const handleCardClick = () => {
-    history.push(`${path}/${id}`);
+    push(`${path}/${id}`);
   };
 
   return (
