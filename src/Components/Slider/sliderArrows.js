@@ -18,14 +18,13 @@ export function SamplePrevArrow(props) {
   const classes = useStyle();
   const { className, onClick } = props;
   return (
-    <div
-      role="button"
-      tabIndex="0"
+    <button
+      type="button"
       className={`${className} ${classes.prev}`}
       onClick={onClick}
     >
       <ArrowBackIosIcon color="primary" />
-    </div>
+    </button>
   );
 }
 
@@ -33,13 +32,13 @@ export function SampleNextArrow(props) {
   const classes = useStyle();
   const { className, onClick } = props;
   return (
-    <div
-      role="button"
+    <button
+      type="button"
       tabIndex="0"
       className={`${className} ${classes.next}`}
       onClick={onClick}
     >
       <ArrowForwardIosIcon color="primary" />
-    </div>
+    </button>
   );
 }

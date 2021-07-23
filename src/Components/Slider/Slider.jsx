@@ -35,7 +35,7 @@ export function SimpleSlider() {
     <div>
       <StyledSlider {...settings}>
         {sliderContent.map((link) => (
-          <div key={link.key}>
+          <div key={link.id}>
             <img width="100%" alt="top" src={link.link} />
           </div>
         ))}
