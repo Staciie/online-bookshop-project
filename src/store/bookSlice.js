@@ -19,7 +19,7 @@ const bookSlice = createSlice({
   reducers: {},
   extraReducers: {
     [bookAsync.fulfilled]: (state, { payload }) => {
-      state.list = [...payload];
+      state.list = payload;
     },
   },
 });
