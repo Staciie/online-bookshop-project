@@ -1,0 +1,136 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "genre": "Novela",
+      "imgUrl": "https://static1.squarespace.com/static/55c934b2e4b07aa63f0469cb/55cb0e24e4b06f393d839f5f/58e5a0c9db29d6a40f6a842b/1491836405135/Screen+Shot+2017-04-05+at+10.30.06+PM.png?format=1500w",
+      "favorite": false,
+      "description": "The Great Gatsby is distinguished as one of the greatest texts for introducing students to the art of reading literature critically (which means you may have read it in school). The novel is told from the perspective of a young man named Nick Carraway who has recently moved to New York City and is befriended by his eccentric nouveau riche neighbor with mysterious origins, Jay Gatsby. The Great Gatsby provides an insider’s look into the Jazz Age of the 1920s in United States history while at the same time critiquing the idea of the “American Dream.” Perhaps the most-famous aspect of the novel is its cover art—a piercing face projected onto a dark blue night sky and lights from a cityscape—an image that is also found, in a slightly different configuration, within the text itself as a key symbol.",
+      "authorHomeland": "USA",
+      "yearOfPublishing": "1925"
+    },
+    {
+      "id": 2,
+      "title": "Don Quixote",
+      "author": "M. de Cervantes",
+      "genre": "Novela, Fantacy",
+      "imgUrl": "https://images-na.ssl-images-amazon.com/images/I/913U0PGbn2L.__BG0,0,0,0_FMpng_AC_UL600_SR393,600_.jpg",
+      "favorite": false,
+      "description": "Don Quixote, perhaps the most influential and well-known work of Spanish literature, was first published in full in 1615. The novel, which is very regularly regarded as one of the best literary works of all time, tells the story of a man who takes the name “Don Quixote de la Mancha” and sets off in a fit of obsession over romantic novels about chivalry to revive the custom and become a hero himself. The character of Don Quixote has become an idol and somewhat of an archetypal character, influencing many major works of art, music, and literature since the novel’s publication. The text has been so influential that a word, quixotic, based on the Don Quixote character, was created to describe someone who is, “foolishly impractical especially in the pursuit of ideals; especially: marked by rash lofty romantic ideas or extravagantly chivalrous action.”",
+      "authorHomeland": "Spain",
+      "yearOfPublishing": "1615"
+    },
+    {
+      "id": 3,
+      "title": "Moby Dick",
+      "author": "H. Melville",
+      "genre": "Novela",
+      "imgUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/disp/bb0ed651679837.58f678e0ec0d2.png",
+      "favorite": false,
+      "description": "The saga of Captain Ahab and his monomaniacal pursuit of the white whale remains a peerless adventure story but one full of mythic grandeur, poetic majesty, and symbolic power. Filtered through the consciousness of the novel's narrator, Ishmael, Moby-Dick draws us into a universe full of fascinating characters and stories, from the noble cannibal Queequeg to the natural history of whales, while reaching existential depths that excite debate and contemplation to this day.",
+      "authorHomeland": "USA",
+      "yearOfPublishing": "1851"
+    },
+    {
+      "id": 4,
+      "title": " War and Peace",
+      "author": "L. Tolstoy",
+      "genre": "Epic novel",
+      "imgUrl": "https://images-na.ssl-images-amazon.com/images/I/914DLyEgQzL.__BG0,0,0,0_FMpng_AC_UL600_SR399,600_.jpg",
+      "favorite": false,
+      "description": "Epic in scale, War and Peace delineates in graphic detail events leading up to Napoleon's invasion of Russia, and the impact of the Napoleonic era on Tsarist society, as seen through the eyes of five Russian aristocratic families.",
+      "authorHomeland": "Russia",
+      "yearOfPublishing": "1869"
+    },
+    {
+      "id": 5,
+      "title": "Hamlet",
+      "author": "W. Shakespeare",
+      "genre": "Tragedy",
+      "imgUrl": "https://images-eu.ssl-images-amazon.com/images/I/81tDMvrC%2BpL.__BG0,0,0,0_FMpng_AC_UL600_SR375,600_.jpg",
+      "favorite": false,
+      "description": "The Tragedy of Hamlet, Prince of Denmark, or more simply Hamlet, is a tragedy by William Shakespeare, believed to have been written between 1599 and 1601. The play, set in Denmark, recounts how Prince Hamlet exacts revenge on his uncle Claudius, who has murdered Hamlet's father, the King, and then taken the throne and married Gertrude, Hamlet's mother. The play vividly charts the course of real and feigned madness—from overwhelming grief to seething rage—and explores themes of treachery, revenge, incest, and moral corruption.",
+      "authorHomeland": "England",
+      "yearOfPublishing": "1601"
+    },
+    {
+      "id": 6,
+      "title": "Gulliver's Travels",
+      "author": "J. Swift",
+      "genre": "Satire",
+      "imgUrl": "https://kbimages1-a.akamaihd.net/125ca8ba-7732-4641-9459-5b5dee50f3d5/1200/1200/False/gulliver-s-travels-221.jpg",
+      "favorite": false,
+      "description": "From the preeminent prose satirist in the English language, a great classic recounting the four remarkable journeys of ship's surgeon Lemuel Gulliver. For children it remains an enchanting fantasy; for adults, a witty parody of political life in Swift's time and a scathing send-up of manners and morals in 18th-century England.",
+      "authorHomeland": "Ireland",
+      "yearOfPublishing": "1726"
+    },
+    {
+      "id": 7,
+      "title": "Beloved",
+      "author": "T. Morrison",
+      "genre": "Novela",
+      "imgUrl": "https://a-free-can.com/WebRoot/Store9/Shops/ee17b8f7-49f0-4514-a7f9-dee61805a5bf/53D9/26A7/5502/7EB4/865F/0A48/3525/81EC/103735082436_m.png",
+      "favorite": false,
+      "description": "Beloved (1987) is a Pulitzer Prize-winning novel by Nobel laureate Toni Morrison. The novel, her fifth, is loosely based on the life and legal case of the slave Margaret Garner, about whom Morrison later wrote in the opera Margaret Garner (2005)",
+      "authorHomeland": "USA",
+      "yearOfPublishing": "1987"
+    },
+    {
+      "id": 8,
+      "title": "The Aeneid",
+      "author": "Virgil",
+      "genre": "Epic poem",
+      "imgUrl": "https://m.media-amazon.com/images/I/51OhslqP5KL.jpg",
+      "favorite": false,
+      "description": "The Aeneid is a Latin epic poem written by Virgil in the late 1st century BC (29–19 BC) that tells the legendary story of Aeneas, a Trojan who traveled to Italy, where he became the ancestor of the Romans. It is written in dactylic hexameter. The first six of the poem's twelve books tell the story of Aeneas' wanderings from Troy to Italy, and the poem's second half tells of the Trojans' ultimately victorious war upon the Latins, under whose name Aeneas and his Trojan followers are destined to be subsumed. The hero Aeneas was already known to Greco-Roman legend and myth, having been a character in the Iliad; Virgil took the disconnected tales of Aeneas' wanderings, his vague association with the foundation of Rome and a personage of no fixed characteristics other than a scrupulous piety, and fashioned this into a compelling founding myth or nationalist epic that at once tied Rome to the legends of Troy, glorified traditional Roman virtues and legitimized the Julio-Claudian dynasty as descendants of the founders, heroes and gods of Rome and Troy.",
+      "authorHomeland": "Italy",
+      "yearOfPublishing": "1st century"
+    },
+    {
+      "id": 9,
+      "title": "David Copperfield",
+      "author": "Ch. Dickens",
+      "genre": "Novel",
+      "imgUrl": "https://i.pinimg.com/originals/36/6c/93/366c93ba09ddd80d883decdce069d5d0.png",
+      "favorite": false,
+      "description": "The story of the abandoned waif who learns to survive through challenging encounters with distress and misfortune.",
+      "authorHomeland": "England",
+      "yearOfPublishing": "1850"
+    },
+    {
+      "id": 10,
+      "title": "The Old Man and the Sea",
+      "author": "E. Hemingway",
+      "genre": "Novel",
+      "imgUrl": "https://www.bookgeeks.in/wp-content/uploads/2019/01/The-Old-Man-and-the-Sea.webp",
+      "favorite": false,
+      "description": "The Old Man and the Sea is one of Hemingway's most enduring works. Told in language of great simplicity and power, it is the story of an old Cuban fisherman, down on his luck, and his supreme ordeal — a relentless, agonizing battle with a giant marlin far out in the Gulf Stream. Here Hemingway recasts, in strikingly contemporary style, the classic theme of courage in the face of defeat, of personal triumph won from loss. Written in 1952, this hugely successful novella confirmed his power and presence in the literary world and played a large part in his winning the 1954 Nobel Prize for Literature.",
+      "authorHomeland": "USA",
+      "yearOfPublishing": "1952"
+    },
+    {
+      "id": 11,
+      "title": "The ocean at the end of the lane",
+      "author": "N. Gaiman",
+      "genre": "Fantasy",
+      "imgUrl": "https://carrierollwagen.com/wp-content/uploads/2013/04/oceanattheendofthelane.jpg",
+      "favorite": false,
+      "description": "Sussex, England. A middle-aged man returns to his childhood home to attend a funeral. Although the house he lived in is long gone, he is drawn to the farm at the end of the road, where, when he was seven, he encountered a most remarkable girl, Lettie Hempstock, and her mother and grandmother. He hasn't thought of Lettie in decades, and yet as he sits by the pond (a pond that she'd claimed was an ocean) behind the ramshackle old farmhouse, the unremembered past comes flooding back. And it is a past too strange, too frightening, too dangerous to have happened to anyone, let alone a small boy. Forty years earlier, a man committed suicide in a stolen car at this farm at the end of the road. Like a fuse on a firework, his death lit a touchpaper and resonated in unimaginable ways. The darkness was unleashed, something scary and thoroughly incomprehensible to a little boy. And Lettie—magical, comforting, wise beyond her years—promised to protect him, no matter what. A groundbreaking work from a master, The Ocean at the End of the Lane is told with a rare understanding of all that makes us human, and shows the power of stories to reveal and shelter us from the darkness inside and out. It is a stirring, terrifying, and elegiac fable as delicate as a butterfly's wing and as menacing as a knife in the dark.",
+      "authorHomeland": "England",
+      "yearOfPublishing": "2013"
+    },
+    {
+      "id": 12,
+      "title": "Lolita",
+      "author": "Vl. Nabokov",
+      "genre": "Novel",
+      "imgUrl": "https://img.huffingtonpost.com/asset/55d33cd814000077002e3283.jpeg?ops=scalefit_630_noupscale",
+      "favorite": false,
+      "description": "Poet and pervert, Humbert Humbert becomes obsessed by twelve-year-old Lolita and seeks to possess her, first carnally and then artistically, out of love, 'to fix once for all the perilous magic of nymphets'. Is he in love or insane? A silver-tongued poet or a pervert? A tortured soul or a monster? Or is he all of these? Humbert Humbert's seduction is one of many dimensions in Nabokov's dizzying masterpiece, which is suffused with a savage humour and rich, elaborate verbal textures. Filmed by Stanley Kubrick in 1962 starring James Mason and Peter Sellers, and again in 1997 by Adrian Lyne starring Jeremy Irons and Melanie Griffith, Lolita has lost none of its power to shock and awe.",
+      "authorHomeland": "Russian Empire",
+      "yearOfPublishing": "1955"
+    }
+  ]
+}

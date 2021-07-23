@@ -9,8 +9,9 @@ export const useStyles = makeStyles({
     top: "0",
     left: "0",
     backgroundColor: "#FFFFFF",
+    zIndex: "10",
     maxHeight: "6em",
-    boxShadow: "-1px -3px 10px #1e8494, 1px 3px 10px #4ABEE5;",
+    boxShadow: "-1px -3px 10px #1e8494, 1px 3px 10px #4ABEE5",
   },
   item: {
     width: "50%",

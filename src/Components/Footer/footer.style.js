@@ -8,7 +8,6 @@ export const useStyles = makeStyles({
     position: "absolute",
     bottom: "0",
     width: "100%",
-    overflow: "hidden",
     backgroundColor: "#D5D5D5",
   },
   copy: {

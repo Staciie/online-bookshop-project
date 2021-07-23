@@ -1,11 +1,12 @@
-import React from "react";
+import { React } from "react";
 import { Grid, Typography, IconButton } from "@material-ui/core";
 import ShoppingCartTwoToneIcon from "@material-ui/icons/ShoppingCartTwoTone";
 import PersonOutlineTwoToneIcon from "@material-ui/icons/PersonOutlineTwoTone";
 import { Link } from "react-router-dom";
-import { Routes } from "../../constants/Routes";
-import { StyledBadge } from "./StyledBadge";
-import { useStyles } from "./HeaderStyle";
+
+import { Routes } from "../../constants/routes";
+import { StyledBadge } from "../StyledComponents/StyledBadge";
+import { useStyles } from "./header.style";
 
 export function Header() {
   const classes = useStyles();

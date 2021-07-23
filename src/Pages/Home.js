@@ -1,5 +1,15 @@
-import { React } from "react";
+import { React, useEffect } from "react";
+import { useDispatch } from "react-redux";
+
+import { bookAsync } from "../store/bookSlice";
+import { BookList } from "../components";
 
 export function Home() {
-  return <h1>Home</h1>;
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(bookAsync());
+  }, []);
+
+  return <BookList />;
 }
