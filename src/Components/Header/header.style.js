@@ -10,7 +10,7 @@ export const useStyles = makeStyles({
     left: "0",
     backgroundColor: "#FFFFFF",
     zIndex: "10",
-    maxHeight: "6em",
+    minHeight: "5em",
     boxShadow: "-1px -3px 10px #1e8494, 1px 3px 10px #4ABEE5",
   },
   item: {

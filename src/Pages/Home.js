@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 
 import { bookAsync } from "../store/bookSlice";
 import { BookList } from "../components";
+import { SimpleSlider } from "../components/Slider/Slider";
 
 export function Home() {
   const dispatch = useDispatch();
@@ -11,5 +12,10 @@ export function Home() {
     dispatch(bookAsync());
   }, []);
 
-  return <BookList />;
+  return (
+    <>
+      <SimpleSlider />
+      <BookList />
+    </>
+  );
 }
