@@ -1,4 +1,7 @@
 import { React } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useHistory, useRouteMatch } from "react-router";
+import PropTypes from "prop-types";
 import {
   Card,
   CardActionArea,
@@ -11,16 +14,18 @@ import {
 import GradeTwoToneIcon from "@material-ui/icons/GradeTwoTone";
 import ShareTwoToneIcon from "@material-ui/icons/ShareTwoTone";
 import ShoppingCartTwoToneIcon from "@material-ui/icons/ShoppingCartTwoTone";
-import { useHistory, useRouteMatch } from "react-router";
-import PropTypes from "prop-types";
+import DoneOutlineTwoToneIcon from "@material-ui/icons/DoneOutlineTwoTone";
 
 import { useStyles } from "./cardItem.style";
+import { addToCart } from "../../../store/cartSlice";
 
-export function CardItem({ id, title, imgUrl, author, description }) {
+export function CardItem({ id, title, imgUrl, author, description, price }) {
   const classes = useStyles();
-
+  const dispatch = useDispatch();
   const { path } = useRouteMatch();
   const { push } = useHistory();
+
+  const cartItems = useSelector((state) => state.cart.items);
 
   const handleCardClick = () => {
     push(`${path}/${id}`);
@@ -38,11 +43,19 @@ export function CardItem({ id, title, imgUrl, author, description }) {
       <Card className={classes.card_content}>
         <CardActionArea onClick={handleCardClick}>
           <CardContent>
-            <Typography gutterBottom variant="h5" component="h5">
+            <Typography variant="h5" component="h5">
               {title}
             </Typography>
             <Typography gutterBottom variant="subtitle1" component="h6">
               {author}
+            </Typography>
+            <Typography
+              gutterBottom
+              variant="h5"
+              component="h5"
+              className={classes.price}
+            >
+              $ {price.toFixed(2)}
             </Typography>
             <Typography variant="body2" color="textSecondary" component="p">
               {`${description.slice(0, 150)}...`}
@@ -59,9 +72,17 @@ export function CardItem({ id, title, imgUrl, author, description }) {
               <ShareTwoToneIcon className={classes.icon} />
             </IconButton>
           </Grid>
-
-          <IconButton aria-label="cart">
-            <ShoppingCartTwoToneIcon className={classes.icon} />
+          <IconButton
+            aria-label="cart"
+            onClick={() => {
+              dispatch(addToCart({ id }));
+            }}
+          >
+            {!cartItems.find((item) => item.id === id) ? (
+              <ShoppingCartTwoToneIcon className={classes.icon} />
+            ) : (
+              <DoneOutlineTwoToneIcon className={classes.selected_icon} />
+            )}
           </IconButton>
         </CardActions>
       </Card>
@@ -75,4 +96,5 @@ CardItem.propTypes = {
   imgUrl: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
 };

@@ -23,10 +23,21 @@ export const useStyles = makeStyles({
     objectFit: "cover",
   },
   icon: {
-    color: "#506C8A",
+    color: "#359FB9",
+  },
+  selected_icon: {
+    color: "#9dd3a8",
   },
   card_actions: {
     display: "flex",
     justifyContent: "space-between",
+  },
+  title: {
+    width: "70%",
+  },
+  price: {
+    fontSize: "1.2em",
+    color: "#252A34",
+    fontWeight: "600",
   },
 });

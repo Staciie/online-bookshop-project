@@ -3,6 +3,7 @@ import { Grid, Typography, IconButton } from "@material-ui/core";
 import ShoppingCartTwoToneIcon from "@material-ui/icons/ShoppingCartTwoTone";
 import PersonOutlineTwoToneIcon from "@material-ui/icons/PersonOutlineTwoTone";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 import { Routes } from "../../constants/routes";
 import { StyledBadge } from "../StyledComponents/StyledBadge";
@@ -10,6 +11,8 @@ import { useStyles } from "./header.style";
 
 export function Header() {
   const classes = useStyles();
+  const cartQuantity = useSelector((state) => state.cart.quantity);
+
   return (
     <Grid container className={classes.container}>
       <Grid item className={classes.item}>
@@ -27,7 +30,7 @@ export function Header() {
 
         <Link to={Routes.cartPath}>
           <IconButton aria-label="cart">
-            <StyledBadge badgeContent={1} color="primary">
+            <StyledBadge badgeContent={cartQuantity} color="primary">
               <ShoppingCartTwoToneIcon
                 fontSize="medium"
                 style={{ color: "#359FB9" }}
