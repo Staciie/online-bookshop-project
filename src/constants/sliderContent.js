@@ -1,4 +1,4 @@
-export const sliderContent = [
+export const SLIDER_CONTENT = [
   {
     id: "img1",
     link: "https://images2.imgbox.com/d7/88/oGwVUP4X_o.png",

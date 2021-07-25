@@ -5,18 +5,19 @@ import PersonOutlineTwoToneIcon from "@material-ui/icons/PersonOutlineTwoTone";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-import { Routes } from "../../constants/routes";
+import { ROUTES } from "../../constants/routes";
 import { StyledBadge } from "../StyledComponents/StyledBadge";
 import { useStyles } from "./header.style";
+import { cartItemsQuantity } from "../../store/selectors";
 
 export function Header() {
   const classes = useStyles();
-  const cartQuantity = useSelector((state) => state.cart.quantity);
+  const cartQuantity = useSelector(cartItemsQuantity);
 
   return (
     <Grid container className={classes.container}>
       <Grid item className={classes.item}>
-        <Link to={Routes.homePath} style={{ textDecoration: "none" }}>
+        <Link to={ROUTES.homePath} style={{ textDecoration: "none" }}>
           <Typography display="inline" className={classes.logo_title}>
             Book<span className={classes.logo_title_span}>Pitch</span>
           </Typography>
@@ -24,11 +25,11 @@ export function Header() {
       </Grid>
 
       <Grid item className={classes.item_right}>
-        <Link to={Routes.contactsPath} className={classes.link}>
+        <Link to={ROUTES.contactsPath} className={classes.link}>
           Contacts
         </Link>
 
-        <Link to={Routes.cartPath}>
+        <Link to={ROUTES.cartPath}>
           <IconButton aria-label="cart">
             <StyledBadge badgeContent={cartQuantity} color="primary">
               <ShoppingCartTwoToneIcon
@@ -39,7 +40,7 @@ export function Header() {
           </IconButton>
         </Link>
 
-        <Link to={Routes.loginPath}>
+        <Link to={ROUTES.loginPath}>
           <IconButton aria-label="login">
             <PersonOutlineTwoToneIcon
               fontSize="medium"

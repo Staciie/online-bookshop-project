@@ -34,7 +34,6 @@ export function SampleNextArrow(props) {
   return (
     <button
       type="button"
-      tabIndex="0"
       className={`${className} ${classes.next}`}
       onClick={onClick}
     >
