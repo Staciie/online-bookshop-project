@@ -39,6 +39,9 @@ body {
   color: #61dafb;
 }
 
+.MuiTableCell-root {
+  border-bottom: none !important; 
+} 
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
