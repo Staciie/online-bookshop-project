@@ -17,7 +17,8 @@ import ShoppingCartTwoToneIcon from "@material-ui/icons/ShoppingCartTwoTone";
 import DoneOutlineTwoToneIcon from "@material-ui/icons/DoneOutlineTwoTone";
 
 import { useStyles } from "./cardItem.style";
-import { addToCart } from "../../../store/cartSlice";
+import { toggleAddToCart } from "../../../store/cartSlice";
+import { cartListSelector } from "../../../store/selectors";
 
 export function CardItem({ id, title, imgUrl, author, description, price }) {
   const classes = useStyles();
@@ -25,12 +26,15 @@ export function CardItem({ id, title, imgUrl, author, description, price }) {
   const { path } = useRouteMatch();
   const { push } = useHistory();
 
-  const cartItems = useSelector((state) => state.cart.items);
+  const cartItems = useSelector(cartListSelector);
 
   const handleCardClick = () => {
     push(`${path}/${id}`);
   };
 
+  const handleAddToCart = () => {
+    dispatch(toggleAddToCart({ id, price }));
+  };
   return (
     <Grid item className={classes.card_container}>
       <img
@@ -72,12 +76,7 @@ export function CardItem({ id, title, imgUrl, author, description, price }) {
               <ShareTwoToneIcon className={classes.icon} />
             </IconButton>
           </Grid>
-          <IconButton
-            aria-label="cart"
-            onClick={() => {
-              dispatch(addToCart({ id }));
-            }}
-          >
+          <IconButton aria-label="cart" onClick={handleAddToCart}>
             {!cartItems.find((item) => item.id === id) ? (
               <ShoppingCartTwoToneIcon className={classes.icon} />
             ) : (

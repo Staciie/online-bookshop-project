@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import { SamplePrevArrow, SampleNextArrow } from "./sliderArrows";
-import { sliderContent } from "../../constants/sliderContent";
+import { SLIDER_CONTENT } from "../../constants/sliderContent";
 
 const settings = {
   dots: true,
@@ -34,9 +34,9 @@ export function SimpleSlider() {
   return (
     <div>
       <StyledSlider {...settings}>
-        {sliderContent.map((link) => (
+        {SLIDER_CONTENT.map((link) => (
           <div key={link.id}>
-            <img width="100%" alt="top" src={link.link} />
+            <img minHeight="320px" width="100%" alt="top" src={link.link} />
           </div>
         ))}
       </StyledSlider>

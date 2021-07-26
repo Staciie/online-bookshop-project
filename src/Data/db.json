@@ -22,7 +22,7 @@
       "description": "Don Quixote, perhaps the most influential and well-known work of Spanish literature, was first published in full in 1615. The novel, which is very regularly regarded as one of the best literary works of all time, tells the story of a man who takes the name “Don Quixote de la Mancha” and sets off in a fit of obsession over romantic novels about chivalry to revive the custom and become a hero himself. The character of Don Quixote has become an idol and somewhat of an archetypal character, influencing many major works of art, music, and literature since the novel’s publication. The text has been so influential that a word, quixotic, based on the Don Quixote character, was created to describe someone who is, “foolishly impractical especially in the pursuit of ideals; especially: marked by rash lofty romantic ideas or extravagantly chivalrous action.”",
       "authorHomeland": "Spain",
       "yearOfPublishing": "1615",
-      "price": 7.30
+      "price": 7.3
     },
     {
       "id": 3,
@@ -34,7 +34,7 @@
       "description": "The saga of Captain Ahab and his monomaniacal pursuit of the white whale remains a peerless adventure story but one full of mythic grandeur, poetic majesty, and symbolic power. Filtered through the consciousness of the novel's narrator, Ishmael, Moby-Dick draws us into a universe full of fascinating characters and stories, from the noble cannibal Queequeg to the natural history of whales, while reaching existential depths that excite debate and contemplation to this day.",
       "authorHomeland": "USA",
       "yearOfPublishing": "1851",
-      "price": 24.20
+      "price": 24.2
     },
     {
       "id": 4,
@@ -58,7 +58,7 @@
       "description": "The Tragedy of Hamlet, Prince of Denmark, or more simply Hamlet, is a tragedy by William Shakespeare, believed to have been written between 1599 and 1601. The play, set in Denmark, recounts how Prince Hamlet exacts revenge on his uncle Claudius, who has murdered Hamlet's father, the King, and then taken the throne and married Gertrude, Hamlet's mother. The play vividly charts the course of real and feigned madness—from overwhelming grief to seething rage—and explores themes of treachery, revenge, incest, and moral corruption.",
       "authorHomeland": "England",
       "yearOfPublishing": "1601",
-      "price": 11.90
+      "price": 11.9
     },
     {
       "id": 6,
@@ -70,7 +70,7 @@
       "description": "From the preeminent prose satirist in the English language, a great classic recounting the four remarkable journeys of ship's surgeon Lemuel Gulliver. For children it remains an enchanting fantasy; for adults, a witty parody of political life in Swift's time and a scathing send-up of manners and morals in 18th-century England.",
       "authorHomeland": "Ireland",
       "yearOfPublishing": "1726",
-      "price": 19.50
+      "price": 19.5
     },
     {
       "id": 7,
@@ -143,6 +143,69 @@
       "authorHomeland": "Russian Empire",
       "yearOfPublishing": "1955",
       "price": 12
+    }
+  ],
+  "checkouts": [
+    {
+      "1": 3,
+      "id": 1
+    },
+    {
+      "3": 2,
+      "6": 3,
+      "id": 2
+    },
+    {
+      "1": 3,
+      "id": 3
+    },
+    {
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 1,
+      "5": 1,
+      "id": 4
+    },
+    {
+      "1": 3,
+      "id": 5
+    },
+    {
+      "1": 3,
+      "id": 6
+    },
+    {
+      "1": 3,
+      "id": 7
+    },
+    {
+      "1": 3,
+      "id": 8
+    },
+    {
+      "1": 2,
+      "id": 9
+    },
+    {
+      "1": 3,
+      "id": 10
+    },
+    {
+      "1": 2,
+      "id": 11
+    },
+    {
+      "1": 2,
+      "id": 12
+    },
+    {
+      "1": 3,
+      "id": 13
+    },
+    {
+      "1": 3,
+      "id": 14
     }
   ]
 }
