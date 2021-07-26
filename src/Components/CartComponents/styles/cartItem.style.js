@@ -25,7 +25,6 @@ export const useStyles = makeStyles({
     display: "flex",
     flexDirection: "column",
     alignItems: "flex-start",
-    // justifyContent: "space-between",
   },
   img: {
     height: "12em",
