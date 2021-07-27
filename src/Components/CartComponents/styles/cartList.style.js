@@ -7,11 +7,14 @@ export const useStyles = makeStyles({
     border: 0,
     color: "white",
     height: 40,
-    marginTop: "3%",
+    margin: "3% 0",
     width: "100%",
     padding: "0 30px",
     "&:hover": {
       background: "#2694ab",
     },
+  },
+  button_container: {
+    margin: "3% 0",
   },
 });
