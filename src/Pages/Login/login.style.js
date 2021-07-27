@@ -1,13 +1,20 @@
 import { makeStyles } from "@material-ui/core";
 
 export const useStyles = makeStyles({
-  form_container: {
+  container: {
     display: "flex",
-    flexDirection: "column",
+    justifyContent: "center",
+    height: "80vh",
+    alignItems: "center",
+  },
+  form: {
+    borderRadius: "10px",
+    boxShadow: "4px 0px 29px 3px rgba(66,66,66,0.84)",
+    padding: "3% 5%",
   },
   input: {
-    margin: "2%",
     width: "100%",
+    margin: "2% 0",
     alignSelf: "center",
   },
   root: {
@@ -17,7 +24,7 @@ export const useStyles = makeStyles({
     border: 0,
     color: "white",
     height: 40,
-    marginBottom: "3%",
+    margin: "2% 0 3%",
     width: "100%",
     padding: "0 30px",
     "&:hover": {
@@ -25,13 +32,7 @@ export const useStyles = makeStyles({
     },
   },
   title: {
-    marginTop: "3%",
-  },
-  action_container: {
-    padding: "0",
-  },
-  title_container: {
-    padding: "0 24px",
+    marginBottom: "3%",
   },
   icon: {
     color: "#359FB9",

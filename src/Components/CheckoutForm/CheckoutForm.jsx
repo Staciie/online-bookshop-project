@@ -16,7 +16,7 @@ import LocalShippingTwoToneIcon from "@material-ui/icons/LocalShippingTwoTone";
 
 import { checkoutAsync, emptyCart } from "../../store/cartSlice";
 import { cartListSelector } from "../../store/selectors";
-import { InputField } from "./InputField";
+import { InputField } from "../FormComponents/InputField";
 import { useStyles } from "./checkoutForm.style";
 import {
   minDate,
@@ -61,9 +61,24 @@ export function CheckoutForm({ onClose, open }) {
             </DialogTitle>
             <DialogContent>
               <Form className={classes.form_container}>
-                <InputField name="city" label="City" type="text" />
-                <InputField name="address" label="Address" type="text" />
-                <InputField name="number" label="Phone number" type="text" />
+                <InputField
+                  name="city"
+                  label="City"
+                  type="text"
+                  className={classes.input}
+                />
+                <InputField
+                  name="address"
+                  label="Address"
+                  type="text"
+                  className={classes.input}
+                />
+                <InputField
+                  name="number"
+                  label="Phone number"
+                  type="text"
+                  className={classes.input}
+                />
                 <MuiPickersUtilsProvider utils={DateFnsUtils}>
                   <DateTimePicker
                     ampm={false}

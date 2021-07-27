@@ -145,5 +145,29 @@
       "price": 12
     }
   ],
-  "checkouts": []
+  "checkouts": [
+    {
+      "order": {
+        "2": 2,
+        "6": 1
+      },
+      "city": "dfdf",
+      "address": "fdsfdsdfs",
+      "phoneNumber": "",
+      "deliveryDate": "2021-07-28T00:14:34.671Z",
+      "number": "0678717346",
+      "id": 1
+    },
+    {
+      "order": {
+        "1": 3
+      },
+      "city": "dfdf",
+      "address": "fdsfdsdfs",
+      "phoneNumber": "",
+      "deliveryDate": "2021-07-28T00:17:22.409Z",
+      "number": "0678717346",
+      "id": 2
+    }
+  ]
 }
