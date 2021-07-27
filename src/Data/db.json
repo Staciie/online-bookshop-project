@@ -146,6 +146,13 @@
     }
   ],
   "checkouts": [
-    
+    {
+      "2": 4,
+      "city": "Kharkov",
+      "address": "ываыва",
+      "number": "23232232",
+      "deliveryDate": "2021-07-28T17:39:54.424Z",
+      "id": 1
+    }
   ]
 }

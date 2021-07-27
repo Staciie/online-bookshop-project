@@ -27,7 +27,6 @@ export function CheckoutForm() {
   const dispatch = useDispatch();
   const classes = useStyles();
   const match = useRouteMatch("/cart/checkout");
-  const onClose = goBack;
   const open = useState(Boolean(match));
 
   const handleSubmit = (values) => {
@@ -44,35 +43,30 @@ export function CheckoutForm() {
       validationSchema={VALIDATION_SCHEMA}
       onSubmit={handleSubmit}
     >
-      {() => (
-        <Dialog onClose={onClose} open={open} fullWidth>
-          <DialogTitle
-            id="dialog-form-title"
-            className={classes.title_container}
-          >
-            <Typography className={classes.title} variant="h5" component="h5">
-              <LocalShippingTwoToneIcon
-                className={classes.icon}
-                fontSize="large"
-              />
-              Shipping details
-            </Typography>
-          </DialogTitle>
-          <DialogContent>
-            <Form className={classes.form_container}>
-              <InputField name="city" label="City" type="text" />
-              <InputField name="address" label="Address" type="text" />
-              <InputField name="number" label="Phone number" type="text" />
-              <Calendar label="Delivery date/time" />
-              <DialogActions className={classes.action_container}>
-                <Button className={classes.root} type="submit">
-                  Submit
-                </Button>
-              </DialogActions>
-            </Form>
-          </DialogContent>
-        </Dialog>
-      )}
+      <Dialog onClose={goBack} open={open} fullWidth>
+        <DialogTitle id="dialog-form-title" className={classes.title_container}>
+          <Typography className={classes.title} variant="h5" component="h5">
+            <LocalShippingTwoToneIcon
+              className={classes.icon}
+              fontSize="large"
+            />
+            Shipping details
+          </Typography>
+        </DialogTitle>
+        <DialogContent>
+          <Form className={classes.form_container}>
+            <InputField name="city" label="City" type="text" />
+            <InputField name="address" label="Address" type="text" />
+            <InputField name="number" label="Phone number" type="text" />
+            <Calendar label="Delivery date/time" />
+            <DialogActions className={classes.action_container}>
+              <Button className={classes.root} type="submit">
+                Submit
+              </Button>
+            </DialogActions>
+          </Form>
+        </DialogContent>
+      </Dialog>
     </Formik>
   );
 }
