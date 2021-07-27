@@ -11,8 +11,8 @@ import {
 import { useDispatch } from "react-redux";
 import LocalShippingTwoToneIcon from "@material-ui/icons/LocalShippingTwoTone";
 import { useRouteMatch } from "react-router-dom";
+import { useHistory } from "react-router";
 
-import { history } from "../../store/history";
 import { checkoutAsync } from "../../store/cartSlice";
 import { InputField } from "./InputField";
 import { useStyles } from "./checkoutForm.style";
@@ -23,10 +23,11 @@ import {
 import { Calendar } from "./Calendar";
 
 export function CheckoutForm() {
+  const { goBack } = useHistory();
   const dispatch = useDispatch();
   const classes = useStyles();
   const match = useRouteMatch("/cart/checkout");
-  const onClose = history.goBack;
+  const onClose = goBack;
   const open = useState(Boolean(match));
 
   const handleSubmit = (values) => {
@@ -43,7 +44,7 @@ export function CheckoutForm() {
       validationSchema={VALIDATION_SCHEMA}
       onSubmit={handleSubmit}
     >
-      {({ values, setFieldValue }) => (
+      {() => (
         <Dialog onClose={onClose} open={open} fullWidth>
           <DialogTitle
             id="dialog-form-title"
@@ -62,11 +63,7 @@ export function CheckoutForm() {
               <InputField name="city" label="City" type="text" />
               <InputField name="address" label="Address" type="text" />
               <InputField name="number" label="Phone number" type="text" />
-              <Calendar
-                label="Delivery date/time"
-                values={values}
-                setFieldValue={setFieldValue}
-              />
+              <Calendar label="Delivery date/time" />
               <DialogActions className={classes.action_container}>
                 <Button className={classes.root} type="submit">
                   Submit

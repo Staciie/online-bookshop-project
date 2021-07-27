@@ -1,12 +1,16 @@
 import React from "react";
 import { DateTimePicker, MuiPickersUtilsProvider } from "@material-ui/pickers";
 import DateFnsUtils from "@date-io/date-fns";
+import { useField } from "formik";
 
 import { useStyles } from "./checkoutForm.style";
 import { minDate } from "../../constants/checkoutValidation";
 
 export function Calendar(props) {
-  const { label, values, setFieldValue } = props;
+  const [meta, helpers] = useField(props);
+  const { value } = meta;
+  const { setValue } = helpers;
+  const { label } = props;
   const classes = useStyles();
 
   return (
@@ -17,8 +21,8 @@ export function Calendar(props) {
         inputVariant="outlined"
         label={label}
         minDate={new Date(minDate)}
-        value={values.deliveryDate}
-        onChange={(date) => setFieldValue("deliveryDate", date)}
+        value={value.deliveryDate}
+        onChange={(date) => setValue("deliveryDate", date)}
       />
     </MuiPickersUtilsProvider>
   );
