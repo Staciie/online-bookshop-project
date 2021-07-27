@@ -1,14 +1,27 @@
+/* eslint-disable no-return-assign */
 /* eslint-disable no-unused-expressions */
 /* eslint-disable no-param-reassign */
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+// import { useSelector } from "react-redux";
 
+// import { cartListSelector } from "./selectors";
 import { history } from "./history";
 import { bookHttpService } from "./bookHttpService";
 
 export const checkoutAsync = createAsyncThunk(
   "checkout/fetch",
-  async (payload) => {
-    const results = await bookHttpService.post("/checkouts", payload);
+  async (payload, { getState }) => {
+    const state = getState();
+    const cartItems = state.cart.items;
+    function reducer(acc, cur) {
+      return { ...acc, [cur.id]: cur.count };
+    }
+
+    const order = cartItems.reduce(reducer, {});
+    const results = await bookHttpService.post("/checkouts", {
+      ...payload,
+      ...order,
+    });
     return results.ok;
   }
 );
