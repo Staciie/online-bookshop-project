@@ -4,4 +4,5 @@ export const ROUTES = {
   loginPath: "/login",
   cartPath: "/cart",
   itemPath: "/books/:id",
+  checkoutPath: "/cart/checkout",
 };
