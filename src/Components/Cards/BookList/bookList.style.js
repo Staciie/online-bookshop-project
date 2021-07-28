@@ -7,4 +7,9 @@ export const useStyles = makeStyles({
     justifyContent: "space-evenly",
     overflow: "hidden",
   },
+  empty_container: {
+    display: "flex",
+    justifyContent: "center",
+    margin: "5% 0 10%",
+  },
 });

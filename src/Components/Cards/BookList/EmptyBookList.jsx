@@ -7,9 +7,9 @@ export function EmptyBookList() {
   const classes = useStyles();
 
   return (
-    <Box className={classes.container}>
+    <Box className={classes.empty_container}>
       <Typography variant="h5" component="h5">
-        No match
+        No results found
       </Typography>
     </Box>
   );

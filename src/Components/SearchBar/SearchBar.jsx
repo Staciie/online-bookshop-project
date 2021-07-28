@@ -22,9 +22,10 @@ export function SearchBar() {
     <Grid className={classes.container}>
       <Button className={classes.root}>Show favorites</Button>
       <TextField
+        variant="outlined"
         type="text"
         className={classes.text_field}
-        placeholder="Search"
+        label="Search"
         aria-label="Recipient's username"
         aria-describedby="button-addon2"
         onChange={optimizedVersion}
