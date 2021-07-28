@@ -1,43 +1,54 @@
-/* eslint-disable no-unused-expressions */
-
-import { React, useEffect } from "react";
+import { React, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Button, Grid } from "@material-ui/core";
 
 import { useStyles } from "./home.style";
-import { showButtonSelector, pageSelector } from "../../store/selectors";
-import { bookAsync, incrementPage, resetList } from "../../store/bookSlice";
+import {
+  showButtonSelector,
+  loadingSelector,
+  bookListSelector,
+} from "../../store/selectors";
+import { bookAsync, resetList } from "../../store/bookSlice";
 import { BookList } from "../../components";
 import { SimpleSlider } from "../../components/Slider/Slider";
-import { emptyCart } from "../../store/cartSlice";
+import { SearchBar } from "../../components/SearchBar/SearchBar";
+import { Loader } from "../../components/Loader";
+import { EmptyBookList } from "../../components/Cards/BookList/EmptyBookList";
 
 export function Home() {
+  const [searchValue, setSearchValue] = useState("");
   const classes = useStyles();
-  const page = useSelector(pageSelector);
   const dispatch = useDispatch();
+  const bookList = useSelector(bookListSelector);
+  const isLoading = useSelector(loadingSelector);
   const showAddButton = useSelector(showButtonSelector);
 
   useEffect(() => {
-    dispatch(emptyCart());
-    page > 1
-      ? (dispatch(resetList()), dispatch(bookAsync()))
-      : dispatch(bookAsync());
+    dispatch(resetList());
+    dispatch(bookAsync());
   }, []);
 
   const handleAddButton = (event) => {
     event.preventDefault();
     dispatch(bookAsync());
-    dispatch(incrementPage());
   };
 
   return (
     <Grid className={classes.container}>
       <SimpleSlider />
-      <BookList />
-      {showAddButton && (
-        <Button className={classes.root} onClick={handleAddButton}>
-          Load More
-        </Button>
+      <SearchBar searchValue={searchValue} setSearchValue={setSearchValue} />
+      {isLoading && <Loader />}
+
+      {!isLoading && bookList.length === 0 && <EmptyBookList />}
+      {!isLoading && (
+        <>
+          <BookList />
+          {showAddButton && (
+            <Button className={classes.root} onClick={handleAddButton}>
+              Load More
+            </Button>
+          )}
+        </>
       )}
     </Grid>
   );

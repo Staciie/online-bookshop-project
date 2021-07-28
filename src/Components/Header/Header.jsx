@@ -8,11 +8,11 @@ import { useSelector } from "react-redux";
 import { ROUTES } from "../../constants/routes";
 import { StyledBadge } from "../StyledComponents/StyledBadge";
 import { useStyles } from "./header.style";
-import { cartItemsQuantity } from "../../store/selectors";
+import { cartItemsSelector } from "../../store/selectors";
 
 export function Header() {
   const classes = useStyles();
-  const cartQuantity = useSelector(cartItemsQuantity);
+  const cartQuantity = useSelector(cartItemsSelector);
 
   return (
     <Grid container className={classes.container}>
