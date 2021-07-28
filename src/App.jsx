@@ -1,11 +1,9 @@
-/* eslint-disable no-unused-vars */
 /* eslint-disable react/no-children-prop */
+/* eslint-disable no-unused-vars */
 /* eslint-disable no-shadow */
-
 import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Dialog from "@material-ui/core/Dialog";
 
 import { Layout } from "./Layout";
 import { Cart, Contacts, Home, Login, Item } from "./pages";
