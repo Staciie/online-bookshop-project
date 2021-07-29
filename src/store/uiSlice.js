@@ -1,20 +1,19 @@
 /* eslint-disable no-param-reassign */
-import { StaticDatePicker } from "@material-ui/lab";
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  page: 1,
-  isLoading: false,
+  showFavorite: false,
 };
 
 const uiSlice = createSlice({
   name: "ui",
   initialState,
   reducers: {
-    incrementPage: () => {
-      StaticDatePicker.page += 1;
+    changeSort: (state) => {
+      state.showFavorite = !state.showFavorite;
     },
   },
 });
 
-export const bookReducer = uiSlice.reducer;
+export const { changeSort } = uiSlice.actions;
+export const uiReducer = uiSlice.reducer;

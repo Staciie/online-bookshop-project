@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-expressions */
 import { React, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Button, Grid } from "@material-ui/core";
@@ -7,6 +8,8 @@ import {
   showButtonSelector,
   loadingSelector,
   bookListSelector,
+  favoritesListSelector,
+  showFavoriteSelector,
 } from "../../store/selectors";
 import { bookAsync, resetList } from "../../store/bookSlice";
 import { BookList } from "../../components";
@@ -22,11 +25,17 @@ export function Home() {
   const bookList = useSelector(bookListSelector);
   const isLoading = useSelector(loadingSelector);
   const showAddButton = useSelector(showButtonSelector);
+  const favoritesList = useSelector(favoritesListSelector);
+  const showFavorite = useSelector(showFavoriteSelector);
 
   useEffect(() => {
     dispatch(resetList());
     dispatch(bookAsync());
   }, []);
+
+  useEffect(() => {
+    showFavorite && (dispatch(resetList()), dispatch(bookAsync()));
+  }, [favoritesList]);
 
   const handleAddButton = (event) => {
     event.preventDefault();

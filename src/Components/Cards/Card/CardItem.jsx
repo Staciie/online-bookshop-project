@@ -12,12 +12,14 @@ import {
   Grid,
 } from "@material-ui/core";
 import GradeTwoToneIcon from "@material-ui/icons/GradeTwoTone";
+import StarIcon from "@material-ui/icons/Star";
 import ShareTwoToneIcon from "@material-ui/icons/ShareTwoTone";
 import ShoppingCartTwoToneIcon from "@material-ui/icons/ShoppingCartTwoTone";
 import DoneOutlineTwoToneIcon from "@material-ui/icons/DoneOutlineTwoTone";
 
 import { useStyles } from "./cardItem.style";
 import { toggleAddToCart } from "../../../store/cartSlice";
+import { toggleAddToFavorites } from "../../../store/bookSlice";
 import { cartListSelector } from "../../../store/selectors";
 
 export function CardItem({ id, title, imgUrl, author, description, price }) {
@@ -27,6 +29,7 @@ export function CardItem({ id, title, imgUrl, author, description, price }) {
   const { push } = useHistory();
 
   const cartItems = useSelector(cartListSelector);
+  const favorites = useSelector((state) => state.book.favorites);
 
   const handleCardClick = () => {
     push(`${path}/${id}`);
@@ -34,6 +37,9 @@ export function CardItem({ id, title, imgUrl, author, description, price }) {
 
   const handleAddToCart = () => {
     dispatch(toggleAddToCart({ id, price }));
+  };
+  const handleAddToFav = () => {
+    dispatch(toggleAddToFavorites({ id }));
   };
   return (
     <Grid item className={classes.card_container}>
@@ -69,8 +75,12 @@ export function CardItem({ id, title, imgUrl, author, description, price }) {
 
         <CardActions className={classes.card_actions}>
           <Grid>
-            <IconButton aria-label="favorite">
-              <GradeTwoToneIcon className={classes.icon} />
+            <IconButton aria-label="favorite" onClick={handleAddToFav}>
+              {!favorites.find((item) => item === id) ? (
+                <GradeTwoToneIcon className={classes.icon} />
+              ) : (
+                <StarIcon className={classes.selected_icon} />
+              )}
             </IconButton>
             <IconButton aria-label="share">
               <ShareTwoToneIcon className={classes.icon} />

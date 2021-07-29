@@ -9,7 +9,6 @@ import { bookListSelector } from "../../../store/selectors";
 export function BookList() {
   const classes = useStyles();
   const list = useSelector(bookListSelector);
-
   return (
     <Box className={classes.container}>
       {list.map((item) => (

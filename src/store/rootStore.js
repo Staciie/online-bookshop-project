@@ -15,12 +15,14 @@ import {
 } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 
+import { uiReducer } from "./uiSlice";
 import { bookReducer } from "./bookSlice";
 import { cartReducer } from "./cartSlice";
 
 const rootReducer = combineReducers({
   book: bookReducer,
   cart: cartReducer,
+  ui: uiReducer,
 });
 
 const persistConfig = {
