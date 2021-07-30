@@ -7,22 +7,18 @@ import { ErrorBoundaryContent } from "./ErrorBoundaryContent";
 export class ErrorBoundary extends Component {
   constructor(props) {
     super(props);
-    this.state = { error: null, errorInfo: null };
+    this.state = { error: false, errorInfo: null };
   }
 
-  componentDidCatch(error, errorInfo) {
+  static getDerivedStateFromError(error, errorInfo) {
     this.setState({
-      error,
+      error: true,
       errorInfo,
     });
-    console.log(error);
+    console.log(errorInfo);
   }
 
   render() {
-    return this.state.errorInfo ? (
-      <ErrorBoundaryContent />
-    ) : (
-      this.props.children
-    );
+    return this.state.error ? <ErrorBoundaryContent /> : this.props.children;
   }
 }
