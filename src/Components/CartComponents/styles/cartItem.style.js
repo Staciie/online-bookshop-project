@@ -9,7 +9,7 @@ export const useStyles = makeStyles({
     alignItems: "flex-start",
     justifyContent: "space-between",
     padding: "1% 0",
-    margin: "2% 0",
+    margin: "0",
     borderTop: "1px solid rgba(107,119,141,0.4)",
   },
   text: {

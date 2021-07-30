@@ -30,7 +30,7 @@ export function CartList({ totalPrice, cartItems }) {
       {cartItems.map((item) => (
         <CartItem key={item.id} {...item} />
       ))}
-      <Grid container alignItems="center">
+      <Grid container className={classes.button_container} alignItems="center">
         <Button
           className={classes.root}
           style={{
