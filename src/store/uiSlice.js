@@ -1,6 +1,8 @@
 /* eslint-disable no-param-reassign */
+/* eslint-disable no-unused-expressions */
 import { createSlice } from "@reduxjs/toolkit";
 
+import { history } from "./history";
 import { USERS } from "../constants/LoginValidation";
 
 const initialState = {
@@ -14,8 +16,10 @@ const uiSlice = createSlice({
     login: (state, { payload }) => {
       state.isAuthenticated = USERS.some(
         (user) =>
-          payload.email === user.email && payload.password === user.password
+          payload.values.email === user.email &&
+          payload.values.password === user.password
       );
+      state.isAuthenticated ? history.push("/books") : payload.setOpen(true);
     },
     logout: (state) => {
       state.isAuthenticated = false;
