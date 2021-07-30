@@ -1,10 +1,7 @@
-/* eslint-disable no-return-assign */
 /* eslint-disable no-unused-expressions */
 /* eslint-disable no-param-reassign */
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-// import { useSelector } from "react-redux";
 
-// import { cartListSelector } from "./selectors";
 import { history } from "./history";
 import { bookHttpService } from "./bookHttpService";
 
