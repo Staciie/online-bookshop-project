@@ -11,11 +11,11 @@ export class ErrorBoundary extends Component {
   }
 
   static getDerivedStateFromError(error, errorInfo) {
-    this.setState({
+    console.log(errorInfo);
+    return {
       error: true,
       errorInfo,
-    });
-    console.log(errorInfo);
+    };
   }
 
   render() {
