@@ -17,10 +17,12 @@ import storage from "redux-persist/lib/storage";
 
 import { bookReducer } from "./bookSlice";
 import { cartReducer } from "./cartSlice";
+import { uiReducer } from "./uiSlice";
 
 const rootReducer = combineReducers({
   book: bookReducer,
   cart: cartReducer,
+  ui: uiReducer,
 });
 
 const persistConfig = {
