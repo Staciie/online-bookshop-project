@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable no-return-assign */
 import { React } from "react";
 import { Grid, Typography } from "@material-ui/core";
@@ -9,7 +10,6 @@ import { cartListSelector } from "../../store/selectors";
 
 export function Cart() {
   const classes = useStyles();
-
   const cartItems = useSelector(cartListSelector);
   const checkoutData = {};
   cartItems.map((item) => (checkoutData[item.id] = item.count));

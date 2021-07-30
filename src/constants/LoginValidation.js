@@ -22,3 +22,10 @@ export const VALIDATION_SCHEMA = yup.object().shape({
     .matches("^[a-zA-Z0-9_.-]*$", "password mustn't contain symbols")
     .required(),
 });
+
+export const USERS = [
+  { email: "123@gmail.com", password: "Aa12345" },
+  { email: "makey15069@insgogc.com", password: "XRkQl1aq" },
+  { email: "evet1950@rhyta.com", password: "PTfr4KPh" },
+  { email: "taxemab9@mail.com", password: "RykE84fe" },
+];
