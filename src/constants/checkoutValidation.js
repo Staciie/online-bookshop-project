@@ -9,7 +9,7 @@ export const minDate = newDate.setDate(newDate.getDate() + 1);
 export const CHECKOUT_OBJ = {
   city: "",
   address: "",
-  phoneNumber: "",
+  number: "",
   deliveryDate: new Date(minDate),
 };
 

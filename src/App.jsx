@@ -1,11 +1,6 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/no-children-prop */
-/* eslint-disable no-shadow */
-
 import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Dialog from "@material-ui/core/Dialog";
 
 import { Layout } from "./Layout";
 import { Cart, Contacts, Home, Login, Item } from "./pages";
@@ -24,23 +19,10 @@ function App() {
           <Route path={ROUTES.contactsPath} component={Contacts} />
           <Route path={ROUTES.loginPath} component={Login} />
           <Route path={ROUTES.itemPath} component={Item} />
-          <Route
-            path={ROUTES.cartPath}
-            children={({ match }) => (
-              <>
-                <Cart />
-                <Route
-                  path={ROUTES.checkoutPath}
-                  children={({ match }) => (
-                    <CheckoutForm
-                      onClose={history.goBack}
-                      open={Boolean(match)}
-                    />
-                  )}
-                />
-              </>
-            )}
-          />
+          <Route path={ROUTES.cartPath}>
+            <Cart />
+            <Route path={ROUTES.checkoutPath} component={CheckoutForm} />
+          </Route>
         </Switch>
       </Layout>
     </Router>
