@@ -5,11 +5,11 @@ import { makeStyles } from "@material-ui/styles";
 
 const useStyle = makeStyles({
   prev: {
-    zIndex: "20",
+    zIndex: "5",
     left: "5px",
   },
   next: {
-    zIndex: "20",
+    zIndex: "5",
     right: "5px",
   },
 });
