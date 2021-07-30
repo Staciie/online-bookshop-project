@@ -2,14 +2,11 @@ import React from "react";
 import { useField } from "formik";
 import { TextField } from "@material-ui/core";
 
-import { useStyles } from "./checkoutForm.style";
-
 export function InputField(props) {
   const [field, meta] = useField(props);
-  const { label, name, type } = props;
+  const { label, name, type, className } = props;
   const { value, onChange, onBlur } = field;
   const { touched, error } = meta;
-  const classes = useStyles();
   const handleChange = (e) => {
     onChange(e);
     if (props.onChange) props.onChange(value);
@@ -22,7 +19,7 @@ export function InputField(props) {
 
   return (
     <TextField
-      className={classes.input}
+      className={className}
       variant="outlined"
       fullWidth="true"
       margin="dense"

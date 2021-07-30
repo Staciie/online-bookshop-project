@@ -38,7 +38,4 @@ export const useStyles = makeStyles({
     verticalAlign: "middle",
     padding: "0 2% 1% 0",
   },
-  picker: {
-    color: "#359FB9",
-  },
 });

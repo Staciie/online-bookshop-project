@@ -14,7 +14,7 @@ import { useRouteMatch } from "react-router-dom";
 import { useHistory } from "react-router";
 
 import { checkoutAsync } from "../../store/cartSlice";
-import { InputField } from "./InputField";
+import { InputField } from "../FormComponents/InputField";
 import { useStyles } from "./checkoutForm.style";
 import {
   CHECKOUT_OBJ,
