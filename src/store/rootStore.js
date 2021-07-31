@@ -18,7 +18,6 @@ import storage from "redux-persist/lib/storage";
 import { uiReducer } from "./uiSlice";
 import { bookReducer } from "./bookSlice";
 import { cartReducer } from "./cartSlice";
-import { uiReducer } from "./uiSlice";
 
 const rootReducer = combineReducers({
   book: bookReducer,

@@ -12,13 +12,19 @@ import {
   TableBody,
 } from "@material-ui/core";
 import GradeTwoToneIcon from "@material-ui/icons/GradeTwoTone";
+import StarIcon from "@material-ui/icons/Star";
 import ShareTwoToneIcon from "@material-ui/icons/ShareTwoTone";
 import ShoppingCartTwoToneIcon from "@material-ui/icons/ShoppingCartTwoTone";
 import DoneOutlineTwoToneIcon from "@material-ui/icons/DoneOutlineTwoTone";
 
-import { bookListSelector, cartListSelector } from "../../store/selectors";
+import {
+  bookListSelector,
+  cartListSelector,
+  favoritesListSelector,
+} from "../../store/selectors";
 import { useStyles } from "./item.style";
 import { toggleAddToCart } from "../../store/cartSlice";
+import { toggleAddToFavorites } from "../../store/bookSlice";
 
 export function Item() {
   const classes = useStyles();
@@ -27,11 +33,15 @@ export function Item() {
   const bookList = useSelector(bookListSelector);
   const cartList = useSelector(cartListSelector);
   const bookItem = bookList.find((item) => item.id === bookId);
-
+  const favorites = useSelector(favoritesListSelector);
   const dispatch = useDispatch();
 
   const handleAddToCart = () => {
     dispatch(toggleAddToCart({ id: bookId, price: bookItem.price }));
+  };
+
+  const handleAddToFav = () => {
+    dispatch(toggleAddToFavorites({ id: bookId }));
   };
 
   return !bookItem ? (
@@ -65,8 +75,12 @@ export function Item() {
         </Box>
 
         <Box ml={-1.5} mb={2}>
-          <IconButton aria-label="favorite" className={classes.icon_button}>
-            <GradeTwoToneIcon className={classes.icon} />
+          <IconButton aria-label="favorite" onClick={handleAddToFav}>
+            {!favorites.find((item) => item === bookId) ? (
+              <GradeTwoToneIcon className={classes.icon} />
+            ) : (
+              <StarIcon className={classes.selected_icon} />
+            )}
           </IconButton>
           <IconButton aria-label="share" className={classes.icon_button}>
             <ShareTwoToneIcon className={classes.icon} />

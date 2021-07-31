@@ -20,7 +20,10 @@ import DoneOutlineTwoToneIcon from "@material-ui/icons/DoneOutlineTwoTone";
 import { useStyles } from "./cardItem.style";
 import { toggleAddToCart } from "../../../store/cartSlice";
 import { toggleAddToFavorites } from "../../../store/bookSlice";
-import { cartListSelector } from "../../../store/selectors";
+import {
+  cartListSelector,
+  favoritesListSelector,
+} from "../../../store/selectors";
 
 export function CardItem({ id, title, imgUrl, author, description, price }) {
   const classes = useStyles();
@@ -29,7 +32,7 @@ export function CardItem({ id, title, imgUrl, author, description, price }) {
   const { push } = useHistory();
 
   const cartItems = useSelector(cartListSelector);
-  const favorites = useSelector((state) => state.book.favorites);
+  const favorites = useSelector(favoritesListSelector);
 
   const handleCardClick = () => {
     push(`${path}/${id}`);

@@ -1,5 +1,5 @@
-/* eslint-disable no-param-reassign */
 /* eslint-disable no-unused-expressions */
+/* eslint-disable no-param-reassign */
 import { createSlice } from "@reduxjs/toolkit";
 
 import { history } from "./history";

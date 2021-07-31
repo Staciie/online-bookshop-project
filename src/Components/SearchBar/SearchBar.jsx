@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Grid, Button, TextField } from "@material-ui/core";
 
 import { changeSort } from "../../store/uiSlice";
-import { throttle } from "../../settings/throttle";
+import { throttle } from "../../settings/Throttle";
 import { bookAsync, resetList } from "../../store/bookSlice";
 import { useStyles } from "./searchBar.style";
 import { showFavoriteSelector } from "../../store/selectors";

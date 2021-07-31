@@ -2,7 +2,7 @@ import { React, useEffect } from "react";
 import { useDispatch } from "react-redux";
 
 import { logout } from "../store/uiSlice";
-import { bookAsync } from "../store/bookSlice";
+import { bookAsync, resetStore } from "../store/bookSlice";
 import { BookList } from "../components";
 import { SimpleSlider } from "../components/Slider/Slider";
 
@@ -11,6 +11,7 @@ export function Home() {
 
   useEffect(() => {
     dispatch(bookAsync());
+    dispatch(resetStore());
     dispatch(logout());
   }, []);
 
