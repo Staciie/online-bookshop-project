@@ -7,8 +7,18 @@ import { bookHttpService } from "./bookHttpService";
 
 export const checkoutAsync = createAsyncThunk(
   "checkout/fetch",
-  async (payload) => {
-    const results = await bookHttpService.post("/checkouts", payload);
+  async (payload, { getState }) => {
+    const state = getState();
+    const cartItems = state.cart.items;
+    function reducer(acc, cur) {
+      return { ...acc, [cur.id]: cur.count };
+    }
+
+    const order = cartItems.reduce(reducer, {});
+    const results = await bookHttpService.post("/checkouts", {
+      ...payload,
+      ...order,
+    });
     return results.ok;
   }
 );

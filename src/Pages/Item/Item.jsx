@@ -1,5 +1,5 @@
 import { React } from "react";
-import { useRouteMatch } from "react-router";
+import { useParams } from "react-router";
 import { useDispatch, useSelector } from "react-redux";
 import {
   Typography,
@@ -22,8 +22,8 @@ import { toggleAddToCart } from "../../store/cartSlice";
 
 export function Item() {
   const classes = useStyles();
-  const { params } = useRouteMatch();
-  const bookId = Number(params.id);
+  const { id } = useParams();
+  const bookId = Number(id);
   const bookList = useSelector(bookListSelector);
   const cartList = useSelector(cartListSelector);
   const bookItem = bookList.find((item) => item.id === bookId);
