@@ -24,7 +24,7 @@ export function SearchBar() {
     dispatch(resetList());
     dispatch(bookAsync());
   }
-  const optimizedVersion = useCallback(throttle(handleChange, 500), []);
+  const optimizedVersion = useCallback(throttle(handleChange, 1000), []);
 
   return (
     <Grid className={classes.container}>
