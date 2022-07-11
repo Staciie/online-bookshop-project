@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import { Layout } from "./Layout";
 import { Cart, Contacts, Home, Login, Item } from "./pages";
-import { ROUTES } from "./constants/routes";
+import { ROUTES } from "./constants/Routes";
 import { history } from "./store/history";
 import ScrollToTop from "./settings/ScrollToTop";
 import { CheckoutForm } from "./components/CheckoutForm/CheckoutForm";

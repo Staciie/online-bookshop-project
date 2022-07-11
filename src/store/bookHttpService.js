@@ -1,4 +1,4 @@
-import { HttpService } from "../httpService/httpService";
+import { HttpService } from "../HttpService/HttpService";
 import { history } from "./history";
 
 export const bookHttpService = new HttpService(

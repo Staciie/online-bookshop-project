@@ -3,7 +3,7 @@ import { Typography, Button } from "@material-ui/core";
 import { Link } from "react-router-dom";
 
 import { useStyles } from "./styles/cartList.style";
-import { ROUTES } from "../../constants/routes";
+import { ROUTES } from "../../constants/Routes";
 
 export function EmptyCart() {
   const classes = useStyles();

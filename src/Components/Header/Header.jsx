@@ -5,7 +5,7 @@ import PersonOutlineTwoToneIcon from "@material-ui/icons/PersonOutlineTwoTone";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-import { ROUTES } from "../../constants/routes";
+import { ROUTES } from "../../constants/Routes";
 import { StyledBadge } from "../StyledComponents/StyledBadge";
 import { useStyles } from "./header.style";
 import { cartItemsSelector } from "../../store/selectors";

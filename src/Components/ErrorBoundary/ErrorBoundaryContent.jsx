@@ -3,7 +3,7 @@ import { React } from "react";
 import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
 
 import { history } from "../../store/history";
-import { ROUTES } from "../../constants/routes";
+import { ROUTES } from "../../constants/Routes";
 import { useStyles } from "./errorBoundary.style";
 
 export function ErrorBoundaryContent() {

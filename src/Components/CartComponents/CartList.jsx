@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { Grid, Button } from "@material-ui/core";
 
-import { ROUTES } from "../../constants/routes";
+import { ROUTES } from "../../constants/Routes";
 import { emptyCart } from "../../store/cartSlice";
 import { CartItem } from "./CartItem";
 import { useStyles } from "./styles/cartList.style";
