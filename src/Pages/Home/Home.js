@@ -12,11 +12,11 @@ import {
   showFavoriteSelector,
 } from "../../store/selectors";
 import { bookAsync, resetList } from "../../store/bookSlice";
-import { BookList } from "../../components";
-import { SimpleSlider } from "../../components/Slider/Slider";
-import { SearchBar } from "../../components/SearchBar/SearchBar";
-import { Loader } from "../../components/Loader";
-import { EmptyBookList } from "../../components/Cards/BookList/EmptyBookList";
+import { BookList } from "../../Components";
+import { SimpleSlider } from "../../Components/Slider/Slider";
+import { SearchBar } from "../../Components/SearchBar/SearchBar";
+import { Loader } from "../../Components/Loader";
+import { EmptyBookList } from "../../Components/Cards/BookList/EmptyBookList";
 
 export function Home() {
   const [searchValue, setSearchValue] = useState("");

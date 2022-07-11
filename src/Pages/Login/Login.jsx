@@ -6,8 +6,8 @@ import { useDispatch } from "react-redux";
 
 import { login } from "../../store/uiSlice";
 import { useStyles } from "./login.style";
-import { InputField } from "../../components/FormComponents/InputField";
-import { CustomizedSnackbars } from "../../components/Snackbar/Snackbar";
+import { InputField } from "../../Components/FormComponents/InputField";
+import { CustomizedSnackbars } from "../../Components/Snackbar/Snackbar";
 import {
   CHECKOUT_OBJ,
   VALIDATION_SCHEMA,

@@ -3,11 +3,11 @@ import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import { Layout } from "./Layout";
-import { Cart, Contacts, Home, Login, Item } from "./pages";
+import { Cart, Contacts, Home, Login, Item } from "./Pages";
 import { ROUTES } from "./constants/Routes";
 import { history } from "./store/history";
 import ScrollToTop from "./settings/ScrollToTop";
-import { CheckoutForm } from "./components/CheckoutForm/CheckoutForm";
+import { CheckoutForm } from "./Components/CheckoutForm/CheckoutForm";
 
 function App() {
   return (

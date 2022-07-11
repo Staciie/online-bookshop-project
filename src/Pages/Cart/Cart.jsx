@@ -5,7 +5,7 @@ import { Grid, Typography } from "@material-ui/core";
 import { useSelector } from "react-redux";
 
 import { useStyles } from "./cart.style";
-import { EmptyCart, CartList } from "../../components";
+import { EmptyCart, CartList } from "../../Components";
 import { cartListSelector } from "../../store/selectors";
 
 export function Cart() {
