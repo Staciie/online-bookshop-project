@@ -5,6 +5,7 @@ import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
 import { history } from "../../store/history";
 import { ROUTES } from "../../constants/Routes";
 import { useStyles } from "./errorBoundary.style";
+import ErrorImg from "../../Assets/404.PNG";
 
 export function ErrorBoundaryContent() {
   const classes = useStyles();
@@ -21,7 +22,7 @@ export function ErrorBoundaryContent() {
         component="img"
         alt="404"
         title="404"
-        src="404.png"
+        src={ErrorImg}
       />
       <Button
         onClick={() => {
