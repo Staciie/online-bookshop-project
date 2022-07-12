@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { HashRouter, Switch, Route } from "react-router-dom";
 
 import { Layout } from "./Layout";
 import { Cart, Contacts, Home, Login, Item } from "./Pages";
@@ -11,7 +11,7 @@ import { CheckoutForm } from "./Components/CheckoutForm/CheckoutForm";
 
 function App() {
   return (
-    <BrowserRouter history={history} basename={process.env.PUBLIC_URL}>
+    <HashRouter history={history} basename={process.env.PUBLIC_URL}>
       <Layout>
         <ScrollToTop />
         <Switch>
@@ -26,7 +26,7 @@ function App() {
           </Route>
         </Switch>
       </Layout>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
